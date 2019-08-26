@@ -2,18 +2,18 @@ import Vue from 'vue'
 
 /* -------------------------Init Multi-language------------------------------ */
 import VueI18n from 'vue-i18n'
-import Cookies from 'js-cookie'
-import locales from './locales'
+// import Cookies from 'js-cookie'
+// import locales from './locales'
 Vue.use(VueI18n)
 
 /* inject i18n */
-const browserLanguage = (window.navigator.language || window.navigator.browserLanguage).split('-')[0]
-const lang = Cookies.get('lang') || (browserLanguage in locales ? browserLanguage : 'en')
-Vue.config.lang = lang
-
-Object.keys(locales).forEach(lang => {
-  Vue.locale(lang, locales[lang])
-})
+// const browserLanguage = (window.navigator.language || window.navigator.browserLanguage).split('-')[0]
+// const lang = Cookies.get('lang') || (browserLanguage in locales ? browserLanguage : 'en')
+// Vue.config.lang = lang
+//
+// Object.keys(locales).forEach(lang => {
+//   Vue.locale(lang, locales[lang])
+// })
 
 
 /* ------------------------Vue Global Variable------------------------------ */
@@ -32,10 +32,13 @@ for (let key in Filters) {
 
 /* ------------------------Vue Global Components------------------------------ */
 
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(ElementUI)
+// import ElementUI from 'element-ui'
+// import 'element-ui/lib/theme-chalk/index.css'
+// Vue.use(ElementUI)
 
-import Icon from '@components/Icon/index.js'
-Vue.component('icon', Icon)
+// import Icon from '@components/Icon/index.js'
+// Vue.component('icon', Icon)
 
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+Vue.use(iView)

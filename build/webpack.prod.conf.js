@@ -73,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           beautify: false
         },
         compress: {
-          warnings: false,
+          // warnings: false,
           drop_console: true,
           collapse_vars: true,
           reduce_vars: true

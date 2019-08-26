@@ -42,8 +42,7 @@ function createHappyPlugin (id, loaders) {
 
 module.exports = {
   entry: {
-    app: './src/main.js',
-    element: ['element-ui']
+    app: './src/main.js'
   },
   mode: env === 'production' ? 'production' : 'development',
   output: {
@@ -132,7 +131,7 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'happypack/loader?id=happy-svg',
-        include: [resolve('src/assets/icons'), resolve('src/assets/images')]
+        include: [resolve('src/assets/icons'), resolve('src/assets/images'), resolve('node_modules')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
